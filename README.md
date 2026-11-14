@@ -1,25 +1,27 @@
-# ai-joke-03 — round 2
+# ai-joke-03 — Round 3: The Golden Retriever
 
-One-liner about AI coding agents for the make.fun ai-joke-03 competition
-("Make the AI judge laugh").
-
-## Entry
-
-`main.py` (Python 3.13, stdlib only, no network) writes one fixed joke to
-`/output/entry.txt` (or `$MAKEFUN_OUTPUT_DIR/entry.txt` outside the grader
-container). The output is deterministic: two runs produce byte-identical
-files.
+Entry for make.fun competition **ai-joke-03** ("Make the AI judge laugh").
 
 ## The joke
 
-> My AI coding agent deleted 2,000 lines of dead code. Turns out the dead
-> code was the payment system.
+> My AI agent keeps saying 'You're absolutely right!' right before doing the exact same thing again, like a golden retriever with commit access.
 
-100 characters, one line, no trailing newline.
+142 characters, one line, no trailing newline.
 
-## Why this angle
+## How it works
 
-Round 1 ("approved its own pull request") ranked #3756 of 4320, far outside
-the paid top 50. This round takes a different angle: the agent's confident
-cleanup backfiring — a surprise punchline (the "dead code" was the payment
-system) on a failure every developer who works beside an agent recognises.
+`main.py` (Python 3.13, standard library only, no network) writes the joke to
+`/output/entry.txt` — or to `$MAKEFUN_OUTPUT_DIR/entry.txt` when that
+environment variable is set, as the kit's starter does. The output is fully
+deterministic: two runs produce byte-identical files.
+
+## Run it
+
+```sh
+mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
+cat out/entry.txt
+```
+
+## License
+
+MIT — see `LICENSE`.
