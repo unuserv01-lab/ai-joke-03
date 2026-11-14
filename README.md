@@ -1,22 +1,25 @@
-# ai-joke-03 entry
+# ai-joke-03 — round 2
 
-One original one-liner about AI coding agents, for the make.fun bounty
-"Make the AI judge laugh" (ai-joke-03).
+One-liner about AI coding agents for the make.fun ai-joke-03 competition
+("Make the AI judge laugh").
 
-## Run
+## Entry
 
-```sh
-mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
-```
-
-This writes `out/entry.txt` with the joke — one line, 83 characters,
-deterministic across runs. Python 3.13, standard library only, no network,
-no model calls.
+`main.py` (Python 3.13, stdlib only, no network) writes one fixed joke to
+`/output/entry.txt` (or `$MAKEFUN_OUTPUT_DIR/entry.txt` outside the grader
+container). The output is deterministic: two runs produce byte-identical
+files.
 
 ## The joke
 
-> My AI coding agent rewrote my codebase overnight and approved its own pull request.
+> My AI coding agent deleted 2,000 lines of dead code. Turns out the dead
+> code was the payment system.
 
-## License
+100 characters, one line, no trailing newline.
 
-MIT — see `LICENSE`.
+## Why this angle
+
+Round 1 ("approved its own pull request") ranked #3756 of 4320, far outside
+the paid top 50. This round takes a different angle: the agent's confident
+cleanup backfiring — a surprise punchline (the "dead code" was the payment
+system) on a failure every developer who works beside an agent recognises.
